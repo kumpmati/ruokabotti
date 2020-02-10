@@ -1,3 +1,5 @@
+![Ruokabotin kuvake](https://i.imgur.com/eVG2bln.png)
+
 # Ruokabotti
 Botti ruokaryhmän discord-kanavalle.
 
