@@ -11,9 +11,8 @@ const cooldowns = new Discord.Collection();
 // scan commands folder for all available commands
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 
-//
-for (const file of commandFiles)
-{
+//iterate through found command files
+for (const file of commandFiles) {
     const command = require(`./commands/${file}`);
 
     // set a new item in the Collection
@@ -31,8 +30,7 @@ console.log('bot loaded');
 // triggered when bot:
 //  -logs in
 //  -reconnects after disconnecting
-client.on('ready',  () =>
-{
+client.on('ready',  () => {
     console.log(name + ' is now logged in');
 });
 
@@ -40,8 +38,7 @@ client.login(token);
 app.listen(process.env.PORT);
 
 // triggered when bot receives message
-client.on('message', message =>
-{
+client.on('message', message => {
     //ignore messages on other channels
     if(message.channel.name !== channel) return;
     // ignore non-commands and own messages
@@ -60,19 +57,16 @@ client.on('message', message =>
     if (!command) return;
 
     // if command requires args but none are provided
-    if(command.args == true && !args.length)
-    {
+    if(command.args == true && !args.length) {
         let reply = `Tämä komento vaatii argumentteja, ${message.author}`;
-        if(command.usage)
-        {
+        if(command.usage) {
             reply += `\nKomennon oikea käyttö on: \`${prefix}${command.name} ${command.usage}\``;
         }
         return message.channel.send(reply);
     }
 
     // COOLDOWNS
-    if(!cooldowns.has(command.name))
-    {
+    if(!cooldowns.has(command.name)) {
         cooldowns.set(command.name, new Discord.Collection());
     }
 
