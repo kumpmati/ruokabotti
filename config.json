@@ -1,5 +1,5 @@
 {
     "prefix": "!",
-    "token": "TOKEN",
-    "name": "matsku-bot"
+    "name": "ruokabotti",
+    "channel": "bot-commands"
 }

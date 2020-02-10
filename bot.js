@@ -23,16 +23,17 @@ for (const file of commandFiles)
 
 //configs
 const package = require('./package.json');
-const { prefix, token, name } = require('./config.json');
+const { prefix, name, channel } = require('./config.json');
+const  { token } = require('./token.json');
 
-console.log('hello bot world!');
+console.log('bot loaded');
 
 // triggered when bot:
 //  -logs in
 //  -reconnects after disconnecting
 client.on('ready',  () =>
 {
-    console.log(name + ' is now open for business!');
+    console.log(name + ' is now logged in');
 });
 
 client.login(token);
@@ -41,8 +42,12 @@ app.listen(process.env.PORT);
 // triggered when bot receives message
 client.on('message', message =>
 {
-    // ignore messages that aren't commands or come from the bot
+    //ignore messages on other channels
+    if(message.channel.name !== channel) return;
+    // ignore non-commands and own messages
     if(!message.content.startsWith(prefix) || message.author.bot) return;
+
+    console.log(`${message.author.username}:${message.content}`);
 
     // get arguments and command name from message
     const args = message.content.slice(prefix.length).split(/ +/);
@@ -106,7 +111,7 @@ client.on('message', message =>
     // catch errors when executing the command
     catch (error) {
         console.error(error);
-        message.reply('jotain meni perseelleen.');
+        message.reply('jotain meni pieleen.');
     }
     console.log(message.author.username + ": " + message.content);
 });

@@ -14,7 +14,7 @@ module.exports =
         }
         else
         {
-            return message.channel.send(message.author + " nyt ei ole perjantai");
+            return message.channel.send(message.author + " nyt ei ole perjantai :-(");
         }
     }
 }
