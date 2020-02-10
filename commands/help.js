@@ -1,29 +1,25 @@
 const { prefix } = require('../config.json');
 
-module.exports =
-{
+module.exports = {
     name: "help",
     args: false,
     cooldown: 2,
     description: "näytä kaikki botin komennot, tai näytä tietoa tietystä komennosta",
     usage: "<komento>",
     aliases: ["apua", "jeesiä", "help", "h"],
-    execute(message, args)
-    {
+    execute(message, args) {
         const data = [];
         const { commands } = message.client;
 
         // if user wants all available commands
-        if(!args.length)
-        {
+        if(!args.length) {
             // list all available commands
             data.push("**Tässä ovat kaikki komennot, joita on tarjolla**");
-            data.push(commands.map(command => command.name).join("\n"));
+            data.push(commands.map(command => `\`!${command.name}\``).join("\n"));
             data.push(`\n Voit saada tietoa yksittäisistä komennoista kirjoittamalla \`${prefix}help <komento>\``);
 
             return message.author.send(data, {split: true})
-                .then( () =>
-                {
+                .then( () => {
                     if (message.channel.type === 'dm') return;
                     message.reply('Lähetin viestin kaikista komennoista yksityisviestillä :wink:');
                 })
@@ -33,8 +29,7 @@ module.exports =
                 });
 
         }
-        else
-        {
+        else {
             // SINGLE COMMAND INFO
 
             // find command in command list
@@ -42,8 +37,7 @@ module.exports =
             const command = commands.get(name) || commands.find(c => c.aliases && c.aliases.includes(name));
 
             // if command is not found, then send a reply
-            if(!command)
-            {
+            if(!command) {
                 return message.reply("en löydä tuota komentoa listasta.");
             }
 
