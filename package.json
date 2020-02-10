@@ -1,0 +1,15 @@
+{
+    "name": "matsku-bot",
+    "version": "1.0.0",
+    "description": "vitu hyvä botti",
+    "main": "web.js",
+    "scripts": {
+        "start": "node bot.js"
+    },
+    "author": "matias kumpulainen",
+    "dependencies": {
+        "discord.js": "^11.3.2",
+        "mersenne-twister": "^1.1.0",
+        "express": "latest"
+    }
+}
