@@ -4,7 +4,7 @@ const d = new Date();
 module.exports = {
     name: "ruokaa",
     args: false,
-    cooldown: 60,
+    cooldown: 20,
     description:
         "näyttää päivän ruokalistan assarilta, galileista ja/tai bryggestä",
     aliases: ["ruoat", "ruoka", "nälkä", "ruokaaaaaaaaaaa"],
