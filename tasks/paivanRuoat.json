@@ -1,42 +1,37 @@
 [
-    {
-        "ravintola": "assarin-ullakko",
-        "ruoat": [
-            "",
-            "Broileripyttipannua paistetulla kananmunalla",
-            "Savulohikiusausta, punajuurisuikaleita",
-            "Mausteisia kanansiipiä  & chilimajoneesia",
-            "LINE 3; Pepperonipannupizzaa",
-            "PÄIVÄN PUURO, LINE 3:  Riisipuuroa &  mustikkasurvosta",
-            "KVÄLLENS EXTRA 16:00;  Artesaanimakkaraa & bratvurstia, maalaisranskalaisia, chilimajoneesia",
-            "Prinsessa-talvipulla marsipaanihunnulla",
-            "Talvipulla manteli- / hillotäytteellä & kermavaahdolla"
-        ],
-        "pvm": "11.2.2020"
-    },
-    {
-        "ravintola": "galilei",
-        "ruoat": [
-            "Punajuuri-vuohenjuustolasagnea",
-            "CAFE:Bataattisosekeittoa",
-            "Chili con carnea *",
-            "CAFE:Broiler-nuudelisalaattia *",
-            "Banaanirahkaa"
-        ],
-        "pvm": "11.2.2020"
-    },
-    {
-        "ravintola": "brygge",
-        "ruoat": [
-            "",
-            "Tomaatti-juustomakaronilaatikkoa",
-            "Kasviskääryleitä, juuresmuusia, puolukkasurvosta (pyydä VEG)",
-            "Juusto-paprikakeittoa GL & suolakeksejä",
-            "PÄIVÄN VEGAANIPUURO LINE 3:  Mannapuuroa soijamaitoon & mustikkasurvosta ",
-            "KVÄLLENS EXTRA 18:00- ;  Tofumakkaraa, maalaisranskalaisia, salsaa",
-            "Prinsessa-talvipulla marsipaanihunnulla",
-            "Talvipulla manteli- / hillotäytteellä & kermavaahdolla"
-        ],
-        "pvm": "11.2.2020"
-    }
+	{
+		"ravintola": "assarin-ullakko",
+		"ruoat": [
+			"",
+			"Broileripyttipannua paistetulla kananmunalla",
+			"Savulohikiusausta, punajuurisuikaleita",
+			"LINE 3; Pepperonipannupizzaa",
+			"PÄIVÄN PUURO, LINE 3: mannapuuroa &  mustikkasurvosta",
+			"KVÄLLENS EXTRA 16:00;  Artesaanimakkaraa & bratvurstia, maalaisranskalaisia, chilimajoneesia"
+		],
+		"pvm": "11.2.2020"
+	},
+	{
+		"ravintola": "galilei",
+		"ruoat": [
+			"Punajuuri-vuohenjuustolasagnea",
+			"CAFE:Bataattisosekeittoa",
+			"Chili con carnea *",
+			"CAFE:Broiler-nuudelisalaattia *",
+			"Banaanirahkaa"
+		],
+		"pvm": "11.2.2020"
+	},
+	{
+		"ravintola": "brygge",
+		"ruoat": [
+			"",
+			"Tomaatti-juustomakaronilaatikkoa",
+			"Kasviskääryleitä, juuresmuusia, puolukkasurvosta (pyydä VEG)",
+			"Juusto-paprikakeittoa GL & suolakeksejä",
+			"PÄIVÄN VEGAANIPUURO LINE 3:  Mannapuuroa soijamaitoon & mustikkasurvosta ",
+			"KVÄLLENS EXTRA 18:00- ;  Tofumakkaraa, maalaisranskalaisia, salsaa"
+		],
+		"pvm": "11.2.2020"
+	}
 ]

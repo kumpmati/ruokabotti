@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const { paivitaRuoat } = require("./tasks/waiter.js");
 
 const fs = require("fs");
 
@@ -119,3 +120,9 @@ client.on("message", message => {
     }
     console.log(message.author.username + ": " + message.content);
 });
+
+paivitaRuoat();
+
+setInterval(() => {
+    paivitaRuoat();
+}, 1000 * 60 * 60 * 4); // 4 tunnin välein
