@@ -108,4 +108,4 @@ dist
 
 # Ignore some configuration files
 token.json
-waiter_config.json
+tasks/waiter_config.json
