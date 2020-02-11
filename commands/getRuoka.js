@@ -9,21 +9,18 @@ module.exports = {
         "näyttää päivän ruokalistan assarilta, galileista ja/tai bryggestä",
     aliases: ["ruoat", "ruoka", "nälkä", "ruokaaaaaaaaaaa"],
     execute(message, args) {
-        const lista = ruokaJono.annaRuoat();
-
-        if (
-            lista[0].pvm !==
-            `${d.getDate()}.${d.getMonth() + 1}.${d.getFullYear()}`
-        ) {
+        const data = ruokaJono.annaRuoat();
+        let currentDate = `${d.getDate()}.${d.getMonth() + 1}.${d.getFullYear()}`;
+        if (lista[0].pvm !== currentDate) {
             ruokaJono.paivitaRuoat();
         }
 
         let responseBody = `\n__**Päivän ruokalista:**__ (${lista[0].pvm})\n`;
-        for (let paikka of lista) {
-            responseBody += `\n**${paikka.ravintola}**\n`;
-            paikka.ruoat = paikka.ruoat.filter(value => value !== ""); //tyhjennä tyhjät
-            for (let i = 0; i < paikka.ruoat.length; i++) {
-                responseBody += `> ${i + 1}. ${paikka.ruoat[i]}\n`;
+        for (let item of data) {
+            responseBody += `\n**${item.ravintola}**\n`;
+            item.ruoat = item.ruoat.filter(value => value !== ""); //tyhjennä tyhjät
+            for (let i = 0; i < item.ruoat.length; i++) {
+                responseBody += `> ${i + 1}. ${item.ruoat[i]}\n`;
             }
             responseBody += "\n";
         }
