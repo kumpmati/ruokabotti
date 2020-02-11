@@ -2,12 +2,12 @@ const ruokaJono = require("../tasks/waiter.js");
 const d = new Date();
 
 module.exports = {
-    name: "ruokaa",
+    name: "ruokalista",
     args: false,
     cooldown: 20,
     description:
         "näyttää päivän ruokalistan assarilta, galileista ja/tai bryggestä",
-    aliases: ["ruoat", "ruoka", "nälkä", "ruokaaaaaaaaaaa"],
+    aliases: ["rl", "ruokalista", "ruokalistat", "ruoat", "ruoka", "nälkä", "ruokaaaaaaaaaaa"],
     execute(message, args) {
         const data = ruokaJono.annaRuoat();
         let currentDate = `${d.getDate()}.${d.getMonth() + 1}.${d.getFullYear()}`;
