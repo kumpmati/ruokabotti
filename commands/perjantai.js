@@ -1,5 +1,4 @@
-module.exports =
-{
+module.exports = {
     name: "perjantai",
     args: false,
     cooldown: 60,

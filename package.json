@@ -8,8 +8,11 @@
     },
     "author": "matias kumpulainen",
     "dependencies": {
+        "cheerio": "^1.0.0-rc.3",
         "discord.js": "^11.3.2",
+        "express": "latest",
         "mersenne-twister": "^1.1.0",
-        "express": "latest"
+        "request": "^2.88.0",
+        "request-promise": "^4.2.5"
     }
 }
