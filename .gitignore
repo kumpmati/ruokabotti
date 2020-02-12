@@ -106,6 +106,7 @@ dist
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
 
-# Ignore some configuration files
+# Configuration files
 token.json
 tasks/waiter_config.json
+tasks/paivanRuoat.json

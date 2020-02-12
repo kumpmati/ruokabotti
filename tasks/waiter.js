@@ -3,7 +3,6 @@ const rp = require("request-promise");
 const config = require("./waiter_config.json");
 const fs = require("fs");
 const d = new Date();
-
 module.exports = {
     annaRuoat() {
         const text = fs.readFileSync(`${config.tiedosto}`, "utf-8");
@@ -24,7 +23,8 @@ module.exports = {
                 console.log(">>ruoat päivitetty");
             })
             .catch(err => {
-                console.log(">>>jotain meni pieleen ruokia päivittäessä");
+                console.log(">>>jotain meni pieleen ruokia päivittäessä:");
+                console.log(err.message);
             });
     }
 };
@@ -33,10 +33,11 @@ function getFood(nimi) {
     return new Promise((resolve, reject) => {
         const options = {
             uri: `https://www.unica.fi/fi/ravintolat/${nimi}/`,
-            transform: function(body) {
+            transform: function (body) {
                 return cheerio.load(body);
             }
         };
+
         let ruoat = {
             ravintola: nimi,
             ruoat: [],

@@ -99,7 +99,7 @@ client.on("message", message => {
                 `odota ${timeLeft.toFixed(
                     0
                 )} sekuntia ennen kuin käytät komentoa \`${
-                    command.name
+                command.name
                 }\` uudelleen.`
             );
         }
@@ -118,7 +118,6 @@ client.on("message", message => {
         console.error(error);
         message.reply("jotain meni pieleen.");
     }
-    console.log(message.author.username + ": " + message.content);
 });
 
 paivitaRuoat();
