@@ -24,7 +24,6 @@ module.exports = {
             }
             responseBody += "\n";
         }
-
         return message.reply(responseBody);
     }
 };
