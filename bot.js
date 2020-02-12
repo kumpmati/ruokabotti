@@ -47,7 +47,7 @@ client.on("message", message => {
     // ignore non-commands and own messages
     if (!message.content.startsWith(prefix) || message.author.bot) return;
 
-    console.log(`${message.author.username}:${message.content}`);
+    console.log(`${new Date().toLocaleString()} | ${message.author.username}: ${message.content}`);
 
     // get arguments and command name from message
     const args = message.content.slice(prefix.length).split(/ +/);
