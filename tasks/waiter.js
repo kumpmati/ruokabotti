@@ -2,7 +2,7 @@ const cheerio = require("cheerio");
 const rp = require("request-promise");
 const config = require("./waiter_config.json");
 const fs = require("fs");
-const d = new Date();
+
 module.exports = {
     annaRuoat() {
         const text = fs.readFileSync(`${config.tiedosto}`, "utf-8");
@@ -37,7 +37,7 @@ function getFood(nimi) {
                 return cheerio.load(body);
             }
         };
-
+        const d = new Date();
         let ruoat = {
             ravintola: nimi,
             ruoat: [],
