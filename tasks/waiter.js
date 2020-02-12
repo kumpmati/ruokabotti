@@ -50,7 +50,6 @@ function getFood(nimi) {
                     .find("table tbody")
                     .children()
                     .each((i, elem) => {
-                        //skippistä mikäli kohde ei ole ruoka
                         let item = $(elem)
                             .find(".lunch")
                             .text();
